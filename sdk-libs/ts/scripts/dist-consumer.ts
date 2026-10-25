@@ -41,7 +41,11 @@ export type {
   TreeContext,
   WalletKeys,
 } from "@heliuslabs/zolana/client";
-export { LocalKeys, NullifierKeyProofAuthority } from "@heliuslabs/zolana/client";
+export {
+  LocalKeys,
+  NullifierKeyProofAuthority,
+  createLocalProofService,
+} from "@heliuslabs/zolana/client";
 export type {
   DecryptRequest,
   DeriveRequest,

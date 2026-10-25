@@ -5,8 +5,9 @@
 Packages that extend the protocol build on this one through an entry point
 outside semver, and the prover and indexer clients carry the requests such a
 package defines. External wallets use `ed25519DerivationMessage(publicKey)` to
-derive their shielded identity. The bare-payload helper is removed because its
-signatures are rejected by the wallet keys constructors.
+derive their shielded identity. An in-process prover can answer wallet proofs
+without HTTP or TEE attestation, so a browser wasm prover no longer needs a
+loopback `proverUrl` shim.
 
 Breaking
 
@@ -21,6 +22,13 @@ Added
   prover refusal through a `ProverRefusal` of the caller, and
   `checkProvingKeys` checks key pins the caller passes, so another package
   proves and indexes over the same transports.
+- `ZolanaClientConfig.prover` takes a `ProofService` (`prove` / `proveMerge`)
+  instead of `proverUrl`; proof data stays `client`, and HTTP-only methods
+  (`proverHealth`, `checkProverProvingKeys`, `attestProver`) fail with
+  `CLIENT_INVALID_CONFIG`.
+- `createLocalProofService(prove)` builds that service from a handler that
+  receives the same `/prove` JSON body `ProverClient` would post and returns
+  the prover's JSON response.
 
 ## 0.5.0-alpha — 2026-10-23
 
