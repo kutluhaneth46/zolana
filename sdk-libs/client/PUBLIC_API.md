@@ -528,7 +528,7 @@ Prove transactions or wait for confirmation and indexing.
     pub fn redact_api_key(url: &str) -> String
     ```
 
-60. `zolana_client::prover::transact::anonymous_ring_eddsa::anonymous_signer_pk_hashes` — [source](src/prover/transact/anonymous_ring_eddsa.rs#L187)
+60. `zolana_client::prover::transact::anonymous_ring_eddsa::anonymous_signer_pk_hashes` — **To be deleted** — [source](src/prover/transact/anonymous_ring_eddsa.rs#L187)
 
     ```rust
     pub fn anonymous_signer_pk_hashes(transaction: &SppProofInputs, owner: &PublicKey) -> Result<Vec<[u8; 32]>, ClientError>
@@ -1128,13 +1128,13 @@ Prove transactions or wait for confirmation and indexing.
     fn prove_merge(&self, inputs: &MergeInputs) -> Result<Proof, ClientError>
     ```
 
-157. `zolana_client::ProverExt::prove_merge_ring` — [source](src/prover/backend.rs#L70)
+157. `zolana_client::ProverExt::prove_merge_ring` — **To be deleted** — [source](src/prover/backend.rs#L70)
 
     ```rust
     fn prove_merge_ring(&self, inputs: &MergeInputs) -> Result<Proof, ClientError>
     ```
 
-158. `zolana_client::ProverExt::prove_ring_authority` — [source](src/prover/backend.rs#L65)
+158. `zolana_client::ProverExt::prove_ring_authority` — **To be deleted** — [source](src/prover/backend.rs#L65)
 
     ```rust
     fn prove_ring_authority(&self, inputs: &TransferInputs) -> Result<Proof, ClientError>
@@ -1158,7 +1158,7 @@ Prove transactions or wait for confirmation and indexing.
     fn prove_transfer(&self, inputs: &TransferInputs) -> Result<Proof, ClientError>
     ```
 
-162. `zolana_client::ProverExt::prove_transfer_ring` — [source](src/prover/backend.rs#L75)
+162. `zolana_client::ProverExt::prove_transfer_ring` — **To be deleted** — [source](src/prover/backend.rs#L75)
 
     ```rust
     fn prove_transfer_ring(&self, inputs: &TransferInputs) -> Result<Proof, ClientError>
@@ -1186,7 +1186,7 @@ Prove transactions or wait for confirmation and indexing.
 
 ## `zolana_client::AnonymousRingEddsaProver`
 
-166. `zolana_client::AnonymousRingEddsaProver::build` — [source](src/prover/transact/anonymous_ring_eddsa.rs#L87)
+166. `zolana_client::AnonymousRingEddsaProver::build` — **To be deleted** — [source](src/prover/transact/anonymous_ring_eddsa.rs#L87)
 
     ```rust
     pub fn build(self) -> Result<AnonymousRingEddsaProofResult, ClientError>
@@ -1342,7 +1342,7 @@ Prove transactions or wait for confirmation and indexing.
 
     Context: `impl AsyncProverClient`.
 
-184. `zolana_client::AsyncProverClient::prove_merge_ring` — [source](src/prover/client.rs#L819)
+184. `zolana_client::AsyncProverClient::prove_merge_ring` — **To be deleted** — [source](src/prover/client.rs#L819)
 
     ```rust
     pub async fn prove_merge_ring(&self, inputs: &MergeInputs) -> Result<Proof, ClientError>
@@ -1350,7 +1350,7 @@ Prove transactions or wait for confirmation and indexing.
 
     Context: `impl AsyncProverClient`.
 
-185. `zolana_client::AsyncProverClient::prove_ring_authority` — [source](src/prover/client.rs#L812)
+185. `zolana_client::AsyncProverClient::prove_ring_authority` — **To be deleted** — [source](src/prover/client.rs#L812)
 
     ```rust
     pub async fn prove_ring_authority(&self, inputs: &TransferInputs) -> Result<Proof, ClientError>
@@ -1366,7 +1366,7 @@ Prove transactions or wait for confirmation and indexing.
 
     Context: `impl AsyncProverClient`.
 
-187. `zolana_client::AsyncProverClient::prove_transfer_ring` — [source](src/prover/client.rs#L823)
+187. `zolana_client::AsyncProverClient::prove_transfer_ring` — **To be deleted** — [source](src/prover/client.rs#L823)
 
     ```rust
     pub async fn prove_transfer_ring(&self, inputs: &TransferInputs) -> Result<Proof, ClientError>
@@ -1724,7 +1724,7 @@ Prove transactions or wait for confirmation and indexing.
 
     Context: `impl MergeProofResult`.
 
-226. `zolana_client::MergeProofResult::ring_instruction_data` — [source](src/prover/merge.rs#L112)
+226. `zolana_client::MergeProofResult::ring_instruction_data` — **To be deleted** — [source](src/prover/merge.rs#L112)
 
     ```rust
     pub fn ring_instruction_data(&self, proof: MergeProof) -> MergeRingIxData
@@ -2086,7 +2086,7 @@ Prove transactions or wait for confirmation and indexing.
 
 ## `zolana_client::RingAuthorityProver`
 
-267. `zolana_client::RingAuthorityProver::build` — [source](src/prover/ring_authority.rs#L74)
+267. `zolana_client::RingAuthorityProver::build` — **To be deleted** — [source](src/prover/ring_authority.rs#L74)
 
     ```rust
     pub fn build(self) -> Result<RingAuthorityProofResult, ClientError>
@@ -2096,7 +2096,7 @@ Prove transactions or wait for confirmation and indexing.
 
 ## `zolana_client::RingTransferProver`
 
-268. `zolana_client::RingTransferProver::build` — [source](src/prover/transact/ring_eddsa.rs#L64)
+268. `zolana_client::RingTransferProver::build` — **To be deleted** — [source](src/prover/transact/ring_eddsa.rs#L64)
 
     ```rust
     pub fn build(self) -> Result<RingTransferProofResult, ClientError>
@@ -2300,7 +2300,7 @@ Prove transactions or wait for confirmation and indexing.
 
     Context: `impl<'a, K: ShieldedKeys + ?Sized> UtxoScan<'a, K>`.
 
-289. `zolana_client::UtxoScan::with_ring_deposit_payload` — [source](src/scan.rs#L118)
+289. `zolana_client::UtxoScan::with_ring_deposit_payload` — **To be deleted** — [source](src/scan.rs#L118)
 
     ```rust
     pub fn with_ring_deposit_payload(mut self, ring_program_id: Address, deposit_payload: DepositPayload) -> Self
@@ -2555,7 +2555,13 @@ Consolidate high-level transaction proving around `TransactionProofRequest` and 
 
 Before removing those APIs, add a proof-only stage to `TransactionProofRequest` that returns a proved transaction convertible into a Solana instruction. Preserve custom transaction composition, unsigned message preparation for mobile wallets and external signers, and the complete prove, sign, send, confirm, and index flow. `MergeProofRequest` retains the corresponding stages, including its existing `ProvedMerge` result.
 
-The underlying `Prover`, `ProverExt`, `AsyncProverClient`, and witness assembly APIs remain available as the primitives used by the request flow.
+The underlying `Prover`, `ProverExt`, `AsyncProverClient`, and witness assembly APIs remain available as the primitives used by the request flow, except for individual methods explicitly marked **To be deleted**.
+
+Both request types expose `prove` and `prove_sync` for staged execution, returning `ProvedTransaction` or `ProvedMerge`. Keep the complete-flow convenience methods on the requests and rename `send` to `prove_and_send`, and `send_sync` to `prove_and_send_sync`.
+
+`prove_and_send` and `prove_and_send_sync` generate and verify the proof, obtain a fresh blockhash, build and sign the Solana message, submit it, and wait for confirmation and indexing. They take an `AsyncZolanaClient` or `ZolanaClient` respectively, plus the required Solana signers; the merge variants take the fee-payer signer. Their names make the included proving work explicit.
+
+Callers who need control over the stages use `prove` or `prove_sync`, then `proved.build_solana_message` with an explicit blockhash, followed by separate signing and RPC submission.
 
 ## Proposed transaction proof request
 
@@ -2576,7 +2582,13 @@ Keep encryption as its own statement:
 let proof_inputs = transaction.encrypt(&sender)?;
 let authorities: &[&dyn ProofAuthority] = &[&sender, &program_authority];
 let request = TransactionProofRequest::new(proof_inputs, authorities)?;
-let unsigned = request.build_solana_message_sync(&client)?;
+let proved = request.prove_sync(&client)?;
+let (blockhash, last_valid_block_height) = client.get_latest_blockhash()?;
+let unsigned = proved.build_solana_message(
+    blockhash,
+    last_valid_block_height,
+    client.compute_budget(),
+)?;
 ```
 
 Accept a slice of proof authorities directly. A normal wallet supplies one authority; a transaction combining inputs with different nullifier keys can supply several, including authorities for program-owned notes. Match each input to its appropriate authority and require every real input that needs proof completion to be completed and validated. Authority selection must be explicit; propagate provider and validation errors rather than treating arbitrary failures as a reason to try another authority. A separate composite-authority type is not required.
@@ -2613,7 +2625,36 @@ let request = MergeProofRequest::new(merge, &sender)?;
 
 Read the shielded address through `MergeKeys` and derive the registry owner from its signing public key. This replaces the separate owner, address, and nullifier-key arguments of `MergeSubmission::new`.
 
-The merge proof does not bind a fee payer. Keep the fee payer as an argument when building the Solana message or sending the merge, so a relayer can pay without changing or regenerating the proof.
+The merge proof does not bind a fee payer. Keep the fee payer as an argument when building the Solana message, so a relayer can pay without changing or regenerating the proof.
+
+## Proposed Solana message construction
+
+Proving returns a proved result containing the verified proof and instruction data. Put `build_solana_message` on that result. The caller supplies a recent blockhash, its corresponding last valid block height, and the compute budget explicitly:
+
+```rust
+impl ProvedTransaction {
+    pub fn build_solana_message(
+        &self,
+        blockhash: Hash,
+        last_valid_block_height: u64,
+        compute_budget: ComputeBudgetConfig,
+    ) -> Result<UnsignedMessage, ClientError>
+}
+
+impl ProvedMerge {
+    pub fn build_solana_message(
+        &self,
+        fee_payer: Address,
+        blockhash: Hash,
+        last_valid_block_height: u64,
+        compute_budget: ComputeBudgetConfig,
+    ) -> Result<UnsignedMessage, ClientError>
+}
+```
+
+This is a pure synchronous operation: it constructs the instruction and unsigned message without RPC access, proof generation, signing, submission, or confirmation. Blocking and async callers use the same method; there is no `_sync` counterpart.
+
+Fetch the blockhash after proving, and keep it paired with the last valid block height from the same RPC response. The result remains `UnsignedMessage { message: VersionedMessage, last_valid_block_height: u64 }`. A caller can rebuild a message using a fresh blockhash without regenerating its proof, subject to that proof's own root validity and expiry.
 
 ## Proposed asset registry and scanning API
 
@@ -2673,12 +2714,14 @@ An undecryptable candidate can belong to another recipient, so it is diagnostic 
 
 | Current name | Proposed name | Reason |
 | --- | --- | --- |
-| `Submission` | `TransactionProofRequest` | Owns the transaction proof inputs, including their fee payer, and accepts a slice of proof authorities plus an optional prover override. Applies to proving, unsigned message preparation, and sending, including withdrawals. |
-| `MergeSubmission` | `MergeProofRequest` | Describes a merge proof request that can be proved, prepared for external signing, or sent. |
-| `finish_unsigned` | `build_solana_message` | On both request types, names the unsigned Solana message being built. Async execution. |
-| `finish_unsigned_sync` | `build_solana_message_sync` | Blocking counterpart on both request types. |
+| `Submission` | `TransactionProofRequest` | Owns the transaction proof inputs, including their fee payer, and accepts a slice of proof authorities plus an optional prover override. Supports proof-only execution or the complete prove-and-send flow, including withdrawals. |
+| `MergeSubmission` | `MergeProofRequest` | Describes a merge proof request with proof-only and complete prove-and-send execution. |
+| `send` | `prove_and_send` | On both request types, explicitly names the complete async prove, sign, submit, confirm, and index flow. |
+| `send_sync` | `prove_and_send_sync` | Blocking counterpart on both request types. |
+| `finish_unsigned` | `prove` followed by `proved.build_solana_message` | Separate async proving from pure message construction with an explicit blockhash. |
+| `finish_unsigned_sync` | `prove_sync` followed by `proved.build_solana_message` | Separate blocking proving from the same pure message builder. |
 | `UtxoScan::with_asset_discovery` | `UtxoScan::disable_asset_discovery` | Discovery is enabled by default; provide an explicit opt-out. |
 
-The message-building methods fetch witnesses, generate and verify the proof, then assemble the instruction, accounts, compute budget, and recent blockhash. They return `UnsignedMessage { message: VersionedMessage, last_valid_block_height: u64 }` for signing and do not sign or send it.
+The proof request fetches the required proof data and generates and verifies the proof. The proved result builds the Solana message using the caller's blockhash, expiry, and compute budget. It returns an `UnsignedMessage` for signing.
 
 Apply these renames to the types and their public reexports. The inventory above retains the current names so existing declarations remain easy to locate while the API is being designed.
